@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hastadb2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="personelbilgi">
+    <Key>
+      <PropertyRef Name="meslekid" />
+    </Key>
+    <Property Name="meslekid" Type="int" Nullable="false" />
+    <Property Name="ad" Type="varchar" MaxLength="50" />
+    <Property Name="yas" Type="int" />
+    <Property Name="departman" Type="varchar" MaxLength="50" />
+    <Property Name="mevki" Type="varchar" MaxLength="50" />
+    <Property Name="tecrube" Type="varchar" MaxLength="50" />
+    <Property Name="Photo" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="hastadb2ModelStoreContainer">
+    <EntitySet Name="personelbilgi" EntityType="Self.personelbilgi" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

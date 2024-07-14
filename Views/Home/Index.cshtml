@@ -1,0 +1,58 @@
+﻿@using System.Web.Mvc
+@{
+    ViewBag.Title = "Home";
+}
+
+@using webtekno.Models.Entity
+@model List<personelbilgi>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personel Bilgi Otomasyonu</title>
+    <link href="~/Content/style.css" rel="stylesheet">
+</head>
+<body>
+    <h2>Mevcut Tüm Çalışan Bilgileri</h2>
+    <table id="patientTable">
+        <thead>
+            <tr>
+                <th>Personel No</th>
+                <th>İsim</th>
+                <th>Yaş</th>
+                <th>Departman</th>
+                <th>Unvan</th>
+                <th>Tecrübe Yılı</th>
+                <th>Fotoğraf</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ktgr in Model)
+            {
+                <tr>
+                    <td>@ktgr.meslekid</td>
+                    <td>@ktgr.ad</td>
+                    <td>@ktgr.yas</td>
+                    <td>@ktgr.departman</td>
+                    <td>@ktgr.mevki</td>
+                    <td>@ktgr.tecrube</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(ktgr.Photo))
+                        {
+                            <img src="@Url.Action("GetImage", "Home", new { imageName = ktgr.Photo })" alt="Fotoğraf" style="width:100px; height:auto;" />
+                        }
+                        else
+                        {
+                            <span>Fotoğraf yok</span>
+                        }
+                    </td>
+                    <td>
+                        <a href="@Url.Action("SIL", "Home", new { id = ktgr.meslekid })" class="btn btn-danger">SİL</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

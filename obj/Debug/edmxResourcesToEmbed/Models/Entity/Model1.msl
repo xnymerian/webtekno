@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hastadb2ModelStoreContainer" CdmEntityContainer="hastadb2Entities">
+    <EntitySetMapping Name="personelbilgi">
+      <EntityTypeMapping TypeName="hastadb2Model.personelbilgi">
+        <MappingFragment StoreEntitySet="personelbilgi">
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="tecrube" ColumnName="tecrube" />
+          <ScalarProperty Name="mevki" ColumnName="mevki" />
+          <ScalarProperty Name="departman" ColumnName="departman" />
+          <ScalarProperty Name="yas" ColumnName="yas" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="meslekid" ColumnName="meslekid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

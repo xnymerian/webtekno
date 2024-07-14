@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hastadb2Model2StoreContainer" CdmEntityContainer="hastadb2Entities3">
+    <EntitySetMapping Name="sifreler">
+      <EntityTypeMapping TypeName="hastadb2Model2.sifreler">
+        <MappingFragment StoreEntitySet="sifreler">
+          <ScalarProperty Name="kullaniciadi" ColumnName="kullaniciadi" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Addpage";
+}
+
+<form class="form-group" method="post" enctype="multipart/form-data" action="@Url.Action("Addpage", "Home")">
+    <div>
+        <label>Personel numarası :</label>
+        <input type="text" class="form-control" name="meslekid" />
+        <label>Personel Adı :</label>
+        <input type="text" class="form-control" name="ad" />
+        <label>Personel Yaşı :</label>
+        <input type="text" class="form-control" name="yas" />
+        <label>Personelin Çalışacağı Departman :</label>
+        <input type="text" class="form-control" name="departman" />
+        <label>Personelin işe gireceği mevki :</label>
+        <input type="text" class="form-control" name="mevki" />
+        <label>Tecrübe Yılı :</label>
+        <input type="text" class="form-control" name="tecrube" />
+        <label>Personel Fotoğrafı :</label>
+        <input type="file" class="form-control" name="Photo" />
+    </div>
+    <div>
+        <button type="submit" class="btn btn-info">Kaydet</button>
+    </div>
+</form>
